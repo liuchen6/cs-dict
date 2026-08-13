@@ -183,7 +183,7 @@
   });
 
   // ---- 视图切换 ----
-  try { state.view = localStorage.getItem('dict-view') === 'grid' ? 'grid' : 'list'; } catch (e) {}
+  try { state.view = localStorage.getItem('dict-view') === 'list' ? 'list' : 'grid'; } catch (e) {}
   syncViewBtns();
   document.getElementById('viewToggle').addEventListener('click', function (e) {
     var btn = e.target.closest('.view-btn'); if (!btn || btn.dataset.view === state.view) return;
